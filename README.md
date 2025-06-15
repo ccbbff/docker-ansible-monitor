@@ -48,7 +48,7 @@ docker pull crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ans
 docker pull crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ansible-dashboard:latest
 
 # 运行容器
-docker run -d   --name ansible-monitor   --network host(-p 8080:80) -v /etc/localtime:/etc/localtime:ro  \
+docker run -d   --name ansible-monitor   --network host(-p 8080:80) -v /etc/localtime:/etc/localtime:ro \
 crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ansible-dashboard
 ```
 2.从源代码构建
@@ -61,7 +61,7 @@ cd ansible-monitor
 docker build -t ansible-monitor .
 
 # 3. 运行容器
-docker run -d   --name ansible-monitor   --network host(-p 8080:80) -v /etc/localtime:/etc/localtime:ro  \
+docker run -d   --name ansible-monitor   --network host(-p 8080:80) -v /etc/localtime:/etc/localtime:ro \
 ansible-monitor
 ```
 
