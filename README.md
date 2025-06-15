@@ -37,7 +37,7 @@ docker pull crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ans
 ![监控仪表板截图](https://via.placeholder.com/800x500/3498db/ffffff?text=Ansible+监控仪表板)
 
 ### 主机管理界面
-![主机管理界面截图](https://via.placeholder.com/800x500/2ecc71/ffffff?text=主机管理界面)
+![https://via.placeholder.com/800x500/2ecc71/ffffff?text=主机管理界面](https://github.com/ccbbff/docker-ansible-monitor/blob/main/%E5%9B%BE%E7%89%87/%E4%B8%BB%E6%9C%BA%E7%AE%A1%E7%90%86%E7%95%8C%E9%9D%A2.png)
 
 ## 创建
 
