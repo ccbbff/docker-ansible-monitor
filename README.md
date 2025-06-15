@@ -42,7 +42,6 @@ docker pull crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ans
 ## 快速开始
 
 ### 部署步骤
-1.使用预构建镜像
 ```bash
 # 从阿里云拉取镜像
 docker pull crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ansible-dashboard:latest
@@ -50,19 +49,6 @@ docker pull crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ans
 # 运行容器
 docker run -d   --name ansible-monitor   --network host(-p 8080:80) -v /etc/localtime:/etc/localtime:ro \
 crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ansible-dashboard
-```
-2.从源代码构建
-```bash
-# 1. 克隆仓库
-git clone https://github.com/ccbbf/ansible-monitor.git
-cd ansible-monitor
-
-# 2. 构建Docker镜像
-docker build -t ansible-monitor .
-
-# 3. 运行容器
-docker run -d   --name ansible-monitor   --network host(-p 8080:80) -v /etc/localtime:/etc/localtime:ro \
-ansible-monitor
 ```
 
 ## 目前问题
