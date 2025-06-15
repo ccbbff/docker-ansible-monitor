@@ -1,0 +1,7 @@
+[all]
+192.168.20.7 ansible_user=root ansible_password=123456 ansible_port=22
+192.168.20.9 ansible_user=root ansible_password=123456 ansible_port=22
+
+[all:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+timezone=UTC

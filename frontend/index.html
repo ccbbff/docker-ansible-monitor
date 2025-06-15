@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansible 主机监控</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-server"></i> Ansible 主机监控</h1>
+            <div class="controls">
+                <div class="control-group">
+                    <button id="manualBtn" class="btn-primary">
+                        <i class="fas fa-sync-alt"></i> 立即运行 Ping
+                    </button>
+                    <div class="switch-container">
+                        <label class="switch">
+                            <input type="checkbox" id="autoToggle" checked>
+                            <span class="slider round"></span>
+                        </label>
+                        <span id="autoLabel">自动刷新: 开启</span>
+                    </div>
+                </div>
+                <a href="/manage.html" class="btn-primary">
+                    <i class="fas fa-cogs"></i> 管理主机
+                </a>
+            </div>
+        </div>
+
+        <div class="info-panel">
+            <div class="info-card">
+                <i class="fas fa-clock"></i>
+                <div>
+                    <span>最后更新</span>
+                    <strong id="lastUpdate">从未</strong>
+                </div>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-microchip"></i>
+                <div>
+                    <span>主机总数</span>
+                    <strong id="hostCount">0</strong>
+                </div>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                    <span>在线</span>
+                    <strong id="onlineCount">0</strong>
+                </div>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div>
+                    <span>离线</span>
+                    <strong id="offlineCount">0</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="status-container">
+            <div class="status-header">
+                <h2><i class="fas fa-list"></i> 主机状态</h2>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="搜索主机...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            <div id="statusOutput" class="status-content">
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i> 正在加载主机状态...
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Ansible 仪表板 v2.0 | 刷新倒计时: <span id="refreshTimer">10</span>秒</p>
+        </div>
+    </div>
+    
+    <script src="/static/refresh.js"></script>
+</body>
+</html>
