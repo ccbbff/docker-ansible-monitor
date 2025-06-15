@@ -52,4 +52,4 @@ crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ansible-dashboa
 ```
 
 ## 目前问题
-容器采用8080端口启动时，管理主机操作后需要手动刷新才能使Ansible主机监控界面才能正常显示。如果采用host网络模式则无此问题。
+容器采用8080端口启动时，管理主机操作后需要手动刷新网页才能使Ansible主机监控界面才能正常显示。如果采用host网络模式则无此问题。
