@@ -6,6 +6,11 @@
 
 一个基于Ansible的现代化主机监控与管理平台，提供实时的主机状态监控和便捷的管理界面。
 
+#### 该镜像已上传至阿里云：
+```bash
+docker pull crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ansible-dashboard:latest
+```
+
 ## 功能亮点
 
 - ✅ **实时主机监控**：可视化展示所有主机的在线/离线状态
@@ -37,7 +42,7 @@
 ## 快速开始
 
 ### 部署步骤
-1.使用预构建镜像（推荐）
+1.使用预构建镜像
 ```bash
 # 从阿里云拉取镜像
 docker pull crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ansible-dashboard:latest
@@ -45,5 +50,20 @@ docker pull crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ans
 # 运行容器
 docker run -d   --name ansible-monitor   --network host(-p 8080:80) -v /etc/localtime:/etc/localtime:ro  \
 crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ansible-dashboard
-
+```
 2.从源代码构建
+```bash
+# 1. 克隆仓库
+git clone https://github.com/ccbbf/ansible-monitor.git
+cd ansible-monitor
+
+# 2. 构建Docker镜像
+docker build -t ansible-monitor .
+
+# 3. 运行容器
+docker run -d   --name ansible-monitor   --network host(-p 8080:80) -v /etc/localtime:/etc/localtime:ro  \
+ansible-monitor
+```
+
+## 目前问题
+容器采用8080端口启动时，管理主机操作后需要手动刷新才能使Ansible主机监控界面才能正常显示。如果采用host网络模式则无此问题。
