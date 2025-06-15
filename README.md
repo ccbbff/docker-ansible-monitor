@@ -36,19 +36,14 @@
 
 ## 快速开始
 
-### 前提条件
-- Docker
-- Docker Compose
-
 ### 部署步骤
-
+1.使用预构建镜像（推荐）
 ```bash
-# 1. 克隆仓库
-git clone https://github.com/yourusername/ansible-monitor.git
-cd ansible-monitor
+# 从阿里云拉取镜像
+docker pull crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ansible-dashboard:latest
 
-# 2. 构建Docker镜像
-docker build -t ansible-monitor .
+# 运行容器
+docker run -d   --name ansible-monitor   --network host(-p 8080:80) -v /etc/localtime:/etc/localtime:ro  \
+crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ansible-dashboard
 
-# 3. 运行容器
-docker run -d -p 8080:80 --name ansible-monitor ansible-monitor
+2.从源代码构建
