@@ -47,7 +47,7 @@ docker pull crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ans
 docker pull crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ansible-dashboard:latest
 
 # 运行容器
-docker run -d   --name ansible-monitor   --network host(-p 8080:80)  crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ansible-dashboard
+docker run -d --name ansible-monitor --network host(-p 8080:80) crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ansible-dashboard
 ```
 
 ## 目前问题
