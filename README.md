@@ -47,8 +47,8 @@ docker pull crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ans
 docker pull crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ansible-dashboard:latest
 
 # 运行容器
-docker run -d --name ansible-monitor --network host(-p 8080:80) crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ansible-dashboard
+docker run -d --name ansible-monitor -p 8080:80(--network host) crpi-tc924g48hyfbhnok.cn-hongkong.personal.cr.aliyuncs.com/ccbbf/ansible-dashboard
 ```
 
 ## 目前问题
-容器采用映射端口运行时，管理主机操作后需要手动刷新网页才能使主机监控界面正常显示。如果采用host网络模式则无此问题。
+(可能)容器采用映射端口运行时，管理主机操作后需要手动刷新网页才能使主机监控界面正常显示。如果采用host网络模式则无此问题。
