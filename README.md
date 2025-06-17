@@ -1,10 +1,10 @@
-# Ansible 主机监控系统
+# Ansible 主机状态监控系统
 
 ![Ansible Dashboard](https://img.shields.io/badge/Ansible-v2.8+-blue.svg)
 ![Flask API](https://img.shields.io/badge/Flask-API-green.svg)
 ![Docker](https://img.shields.io/badge/Docker-Containerized-blue.svg)
 
-一个基于Ansible的现代化主机监控与管理平台，提供实时的主机状态监控和便捷的管理界面。
+一个基于Ansible的现代化主机状态监控与管理平台，提供实时的主机状态监控和便捷的管理界面。
 
 #### 该镜像已上传至阿里云：
 ```bash
@@ -51,4 +51,4 @@ docker run -d --name ansible-monitor --network host(-p 8080:80) crpi-tc924g48hyf
 ```
 
 ## 目前问题
-容器采用映射端口启动时，管理主机操作后需要手动刷新网页才能使Ansible主机监控界面才能正常显示。如果采用host网络模式则无此问题。
+容器采用映射端口启动时，管理主机操作后需要手动刷新网页才能使主机监控界面正常显示。如果采用host网络模式则无此问题。
